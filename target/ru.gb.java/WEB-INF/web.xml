@@ -1,0 +1,37 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <filter>
+    <filter-name>requestEncodeFilter</filter-name>
+    <filter-class>ru.gb.javaee.lesson2.filters.Charset</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>requestEncodeFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+    <servlet>
+        <servlet-name>Cart</servlet-name>
+        <servlet-class>ru.gb.javaee.lesson2.Cart</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Cart</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Catalog</servlet-name>
+        <servlet-class>ru.gb.javaee.lesson2.Catalog</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Catalog</servlet-name>
+        <url-pattern>list</url-pattern>
+    </servlet-mapping>
+
+</web-app>
